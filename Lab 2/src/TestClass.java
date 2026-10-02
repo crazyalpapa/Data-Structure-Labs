@@ -15,6 +15,11 @@ public class TestClass {
         System.out.println("index 2: " + list.get(2));
         System.out.println("index 3: " + list.get(3));
 
+        System.out.println();
+        list.displayList();
+        
+        System.out.println("\nLongest string: " + list.listLongest());
+
         list.remove(2);
         System.out.println("\nList size after remove(): " + list.size());
 
