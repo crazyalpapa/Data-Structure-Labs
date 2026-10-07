@@ -71,13 +71,17 @@ public class StackReferenceBased implements StackInterface
   public void displayStack(){
     Node curr = top;
 
-    System.out.println(curr.getItem() + " -- top of stack");
-    curr = curr.getNext();
-
+    if (curr == null) {
+      System.out.println("Stack is empty");
+    }
+    else{
+      System.out.println("\n" + curr.getItem() + " -- top of stack");
+      curr = curr.getNext();
+    }
     while (curr != null) {
         System.out.println(curr.getItem());
         curr = curr.getNext();
-    } 
-  
-  }
+    }
+    System.out.println();
+  }//displayStack()
 }  // end StackReferenceBased
